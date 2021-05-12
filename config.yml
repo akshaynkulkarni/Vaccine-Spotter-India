@@ -6,9 +6,9 @@ email:
   to : ["<receiver_email_id>"]
 
 area_info:
-# [edit] enter your district code or pincode
+# [edit] enter your district code or pincode(s)
   __district_code : "<district_code>" 
-  __pincode : "<pincode>"
+  __pincode : ["pincode_1", "pincode_2", "pincode_n"]
   
 age_limit:
   age_limit : [18, 45]
