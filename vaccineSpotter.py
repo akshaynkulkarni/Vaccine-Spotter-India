@@ -144,7 +144,12 @@ class vaccineSpotter:
 			url = root_url + "/calendarByDistrict?district_id=" + self.__district_code + "&date="+ __date
 
 		elif query_type =='pincode':
-			url = root_url + "/findByPin?pincode=" + self.__pincode + "&date=" + __date
+			for pin in self.__pincode:
+				print("======================================================")
+				print("\nChecking Vaccine availability for pincode: {}\n".format(pin))
+				url = root_url + "/findByPin?pincode=" + pin + "&date=" + __date
+				self.call_api(url,  headers, query_type)
+			return
 		else:
 			print('incorrect query type\nquery type must be either district_code or pincode\n')
 			return
