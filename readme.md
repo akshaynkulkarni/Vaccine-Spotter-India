@@ -6,7 +6,7 @@ It uses the [api](https://apisetu.gov.in/public/marketplace/api/cowin/cowin-publ
 
 ## Features
 
-- Check availability of vaccine by providing pincode or district code of your area
+- Check availability of vaccine by providing pincode(s) or district code of your area
 - Run in the terminal and monitor the vaccine availability
 - Send email to email address set by user immediately when there is vaccines available
 - set age range to check availability in that range.
@@ -41,13 +41,13 @@ email:
 
 There are two ways in which you can see vaccine availability
 
-### Using pincode.
+### Using pincode(s).
 Set your area pincode in [config file](config.yml) file as shown below. Find pincode of your area [here](https://www.indiapost.gov.in/VAS/Pages/findpincode.aspx)
 ``` sh 
 area_info:
-# [edit] enter your district code or pincode
+# [edit] enter your district code or pincode(s)
   __district_code : "<district_code>" 
-  __pincode : "<pincode>"
+  __pincode : ["pincode_1", "pincode_2", "pincode_n"]
 ```
 
 Edit [vaccineSpotter](vaccineSpotter.py) file and set 
